@@ -15,5 +15,5 @@ test_Vacancy_init также успешно отработал:
 
 ## Теперь проверим работоспособность docTests.
 Видим, что они успешно прошли
-![image](https://user-images.githubusercontent.com/104893843/209448625-32fffaf8-6128-46a8-8f7e-e2c9744a14d8.png)
+![image](https://user-images.githubusercontent.com/104893843/209448634-c1848ad5-3044-4797-8454-13b03eac4fb0.png)
 
