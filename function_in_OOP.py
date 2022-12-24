@@ -29,6 +29,18 @@ class Vacancy:
         """
         Задать шаблон преобразования получаемого объекта
         :param vacancy: объект "Вакансия" с элементами по ключу
+
+        >>> Vacancy({'salary_from': '10', 'salary_to' : '100' , 'salary_gross' : 'Без вычета налогов', 'salary_currency' : 'RUR', 'name' : 'Программист', 'description' : 'Настоящий мегамозг', 'key_skills' : 'Усидчивость', 'experience_id' : 'moreThan6', 'premium' : 'True', 'employer_name' : 'Скб Контур', 'area_name' : 'Екб', 'published_at' : '2022-05-31T17:32:31+0300'}).name
+        'Программист'
+
+        >>> Vacancy({'salary_from': '10', 'salary_to' : '100' , 'salary_gross' : 'Без вычета налогов', 'salary_currency' : 'RUR', 'name' : 'Программист', 'description' : 'Настоящий мегамозг', 'key_skills' : 'Усидчивость', 'experience_id' : 'moreThan6', 'premium' : 'True', 'employer_name' : 'Скб Контур', 'area_name' : 'Екб', 'published_at' : '2022-05-31T17:32:31+0300'}).area_name
+        'Екб'
+
+        >>> Vacancy({'salary_from': '10', 'salary_to' : '100' , 'salary_gross' : 'Без вычета налогов', 'salary_currency' : 'RUR', 'name' : 'Программист', 'description' : 'Настоящий мегамозг', 'key_skills' : 'Усидчивость', 'experience_id' : 'moreThan6', 'premium' : 'True', 'employer_name' : 'Скб Контур', 'area_name' : 'Екб', 'published_at' : '2022-05-31T17:32:31+0300'}).published
+        '2022-05-31T17:32:31+0300'
+
+        >>> Vacancy({'salary_from': '10', 'salary_to' : '100' , 'salary_gross' : 'Без вычета налогов', 'salary_currency' : 'RUR', 'name' : 'Программист', 'description' : 'Настоящий мегамозг', 'key_skills' : 'Усидчивость', 'experience_id' : 'moreThan6', 'premium' : 'True', 'employer_name' : 'Скб Контур', 'area_name' : 'Екб', 'published_at' : '2022-05-31T17:32:31+0300'}).published_at
+        '31.05.2022'
         """
         self.index = 0
         self.name = self.clearHTML(vacancy['name'])
@@ -84,6 +96,9 @@ class Vacancy:
 
         >>> Vacancy({'salary_from': '10', 'salary_to' : '100' , 'salary_gross' : 'Без вычета налогов', 'salary_currency' : 'RUR', 'name' : 'Программист', 'description' : 'Настоящий мегамозг', 'key_skills' : 'Усидчивость', 'experience_id' : 'moreThan6', 'premium' : 'True', 'employer_name' : 'Скб Контур', 'area_name' : 'Екб', 'published_at' : '2022-05-31T17:32:31+0300'}).salary_currency
         'RUR'
+
+        >>> type(Vacancy({'salary_from': '10', 'salary_to' : '100' , 'salary_gross' : 'Без вычета налогов', 'salary_currency' : 'RUR', 'name' : 'Программист', 'description' : 'Настоящий мегамозг', 'key_skills' : 'Усидчивость', 'experience_id' : 'moreThan6', 'premium' : 'True', 'employer_name' : 'Скб Контур', 'area_name' : 'Екб', 'published_at' : '2022-05-31T17:32:31+0300'})).__name__
+        'Vacancy'
         """
         return self.salary_class.salary_currency
 
